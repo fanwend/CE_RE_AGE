@@ -16,7 +16,7 @@ class CEScenario(Scenario):
         if self.network_type == "barabasi_albert_graph":
             network_params = {"m": int(self.network_param_m)}
         elif self.network_type == "watts_strogatz_graph":
-            network_params = {"k": self.network_param_k, "p": self.network_param_p}
+            network_params = {"k": int(self.network_param_k), "p": int(self.network_param_p)}
         else:
             raise NotImplementedError
         return network_params
